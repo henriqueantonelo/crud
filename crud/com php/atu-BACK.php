@@ -40,7 +40,7 @@ $id     = $_POST['id'];
 
 }
 if(isset($erro))
-echo'<div style="color:#F00>"'.$erro.'</div><br>';
+echo'header("location: sucesso.html");';
 if(isset($sucesso))
 echo'<div style= "color: green">'.$sucesso.'</div><br>';
 
