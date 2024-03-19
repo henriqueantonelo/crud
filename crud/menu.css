@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap");
+
+:root {
+  --background-color: #454545;
+  --secondary-color: #3aafb9;
+  --tertiary-color: #ffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--background-color);
+  font-family: sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+nav {
+  background-color: var(--tertiary-color);
+  position: absolute;
+  width: 326px;
+  height: 451px;
+  transform: translate(-50%, -50%);
+  border-radius: 34px;
+  box-shadow: 15px 15px #232323;
+}
+
+nav ul a {
+  text-decoration: none;
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
+  height: 38px;
+  width: 192px;
+  margin-left: 67px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  margin-top: 24px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+#cadastrar {
+  margin-top: 51px;
+}
+
+a:hover {
+  background-color: #008894;
+}

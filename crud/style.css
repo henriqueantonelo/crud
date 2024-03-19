@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap");
+:root {
+  --background-color: #454545;
+  --primary-color: #3aafb9;
+  --white: #ffff;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: var(--background-color);
+}
+
+.navbar {
+  background-color: var(--white);
+  width: 800px;
+  position: fixed;
+  bottom: 0;
+  left: 15%;
+  margin-bottom: 100px;
+  border-radius: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: var(--primary-color);
+}
+
+.navbar li {
+  display: inline-block;
+  padding: 0;
+}
+
+.navbar li a {
+  display: block;
+  color: var(--primary-color);
+  padding: 20px 20px;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.navbar li a:hover {
+  background-color: #d6d6d6;
+}
