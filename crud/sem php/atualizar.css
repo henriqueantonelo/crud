@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap");
+:root {
+  --background-color: #454545;
+  --primary-color: #3aafb9;
+  --white: #ffff;
+  --light-gray: #eeee;
+  --light-primary: #e6fcff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--background-color);
+  font-family: sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+form {
+  background-color: var(--white);
+  position: absolute;
+  width: 544px;
+  height: 360px;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  box-shadow: 15px 15px #232323;
+}
+
+input {
+  border: none;
+  background-color: var(--light-gray);
+  height: 38px;
+  width: 393px;
+  margin-left: 40px;
+  padding-left: 10px;
+  margin-bottom: 32px;
+}
+
+input:focus {
+  background-color: var(--light-primary);
+}
+
+label {
+  display: flex;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h1 {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 38px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.forms-container {
+  height: 387px;
+  width: 433px;
+  margin-left: 56px;
+  margin-top: 86px;
+}
+
+.input-container {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.icon {
+  align-items: center;
+  text-align: center;
+  padding-left: 15px;
+  font-size: 20px;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-size: 20px;
+  border: none;
+  width: 445px;
+  height: 40px;
+}
+
+button:hover {
+  background-color: #008894;
+}
+
+/* navbar */
+
+.navbar {
+  background-color: var(--white);
+  width: 800px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 60px;
+  border-radius: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: var(--primary-color);
+}
+
+.navbar li {
+  display: inline-block;
+  padding: 0;
+}
+
+.navbar li a {
+  display: block;
+  color: var(--primary-color);
+  padding: 20px 20px;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.navbar li a:hover {
+  background-color: var(--light-gray);
+}
+
+.box {
+  padding-top: 45px;
+}
