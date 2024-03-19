@@ -74,7 +74,7 @@ h1 {
   align-items: center;
   position: absolute;
   background-color: var(--primary-color);
-  color: var(--whiteh);
+  color: var(--white);
 }
 
 .fa-user {
