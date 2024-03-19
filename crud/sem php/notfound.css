@@ -72,11 +72,6 @@ h1 {
   cursor: pointer;
 }
 
-button a {
-  color: var(--white);
-  text-decoration: none;
-}
-
 button:hover {
   background-color: #008894;
 }
