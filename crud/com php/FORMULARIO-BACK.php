@@ -18,8 +18,8 @@ else
 {
 
 //  variavel      |        server   |  login,senha | (nome banco)
-$conexao = new mysqli("127.0.0.1","root","","crud_henrique" );// Caso aconteça erro de conexão
-if ($conexao->connect_errno){
+    $conexao = new mysqli("127.0.0.1","root","","crud_henrique" );
+    if ($conexao->connect_errno){
         echo "Ocorreu um erro na conexão com o banco de dados.";
         exit;
     }
@@ -29,7 +29,7 @@ if ($conexao->connect_errno){
     $cidade = $_POST["cidade"]; 
     $uf     = $_POST["uf"]; 
                                              //tem que ter apostrofo (``)                    
-    $stmt = $conexao-> prepare("INSERT INTO `cliente`(`nome`,`email`,`cidade`,`uf`)VALUES(?,?,?,?)");
+    $stmt = $conexao-> prepare("INSERT INTO cliente(nome,email,cidade,uf)VALUES(?,?,?,?)");
     $stmt-> bind_param('ssss',$nome,$email,$cidade,$uf);
     
     if(!$stmt->execute())
@@ -37,7 +37,7 @@ if ($conexao->connect_errno){
         $erro = $stmt->error;
     }
     else{
-        $sucesso = "Dados cadastros com sucesso!";
+        header("location: sucesso.php");;
     }
   }
 }

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,12 +14,12 @@
       referrerpolicy="no-referrer"
     />
   </head>
-<body>
-<div class="container">
+  <body>
+    <div class="container">
       <div class="wrapper">
-      <h1>LISTA DOS CLIENTES</h1>
-      <div class="list-wrapper">
-        <table>
+        <h1>LISTA DOS CLIENTES</h1>
+        <div class="list-wrapper">
+          <table>
             <tr>
               <td>
                 <div class="table-header">
@@ -39,35 +39,14 @@
               <td>
                 <div class="scrollable-table">
                   <table>
-<?php 
-//     variavel      |        server   |  login,senha | (nome banco)
-     $conexao = new mysqli("127.0.0.1","root","","crud_henrique" );
-    if ($conexao->connect_errno){
-     echo "Ocorreu um erro na conexão com o banco de dados.";
-     exit;
-        }
-// Arrumar os acentos
-    $conexao-> set_charset("utf8");
-
-    $sql = "SELECT * FROM cliente;";
-    // echo $sql."<br>";
-    $result = $conexao->query($sql);
-    if($result->num_rows > 0){
-        while($linha = $result-> fetch_assoc()){
-            echo "<tr>";
-            echo "<td>".$linha['id']."</td>";
-            echo "<td>".$linha['nome']."</td>";
-            echo "<td>".$linha['email']."</td>";
-            echo "<td>".$linha['cidade']."</td>";
-            echo "<td>".$linha['uf']."</td>";
-            echo "</tr>";
-        }
-    } else {
-        echo "Sem resultados";
-    }
-    $conexao->close();
-?>
-</table>
+                    <tr>
+                      <td>1</td>
+                      <td>Jhonny Anthony de Souza</td>
+                      <td>user1@gmail.com</td>
+                      <td>São josé dos pinhais</td>
+                      <td>UF</td>
+                    </tr>
+                  </table>
                 </div>
               </td>
             </tr>
@@ -75,8 +54,7 @@
         </div>
       </div>
     </div>
-
-<div>
+    <div>
       <nav class="navbar">
         <ul>
           <li><a href="#" class="fa-solid fa-house" title="Menu"></a></li>
@@ -97,5 +75,5 @@
         </ul>
       </nav>
     </div>
-</body>
+  </body>
 </html>
