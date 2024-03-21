@@ -23,34 +23,51 @@
             <tr>
               <td>
                 <div class="scrollable-table">
-                  <table id="vertical">
-                    <thead>
-                      <tr>
-                        <th colspan="3">Nome</th>
-                      </tr>
-                      <tr>
-                        <th colspan="3">E-mail</th>
-                      </tr>
-                      <tr>
-                        <th colspan="3">Cidade</th>
-                      </tr>
-                      <tr>
-                        <th colspan="3">UF</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Jhonny Anthony</td>
-                      </tr>
-                      <tr>
-                        <td>user1@gmail.com</td>
-                      </tr>
-                      <tr>
-                        <td>São josé dos pinhais</td>
-                      </tr>
-                      <tr>
-                        <td>UF</td>
-                      </tr>
+<?php
+$conexao = new mysqli("127.0.0.1","root","","crud_henrique" );
+if ($conexao->connect_errno){
+    echo "Ocorreu um erro na conexão com o banco de dados.";
+    exit;
+}
+$conexao->set_charset("utf8");
+$sql = "SELECT * FROM cliente;";
+$result = $conexao->query($sql);
+if ($result->num_rows > 0) {
+    while ($linha = $result->fetch_assoc()) {
+        echo "<table id=\"vertical\">";
+        echo "<thead>";
+        echo "<tr>";
+        echo "<th>Nome</th>";
+        echo "</tr>";
+        echo "<tr>";
+        echo "<th>Email</th>";
+        echo "</tr>";
+        echo "<tr>";
+        echo "<th>Cidade</th>";
+        echo "</tr>";
+        echo "<tr>";
+        echo "<th>UF</th>";
+        echo "</tr>";
+        echo "</thead>";
+        echo "<tbody>";
+        echo "<tr>";
+        echo "<td>".$linha['nome']."</td>";
+        echo "</tr>";
+        echo "<tr>";
+        echo "<td>".$linha['email']."</td>";
+        echo "</tr>";
+        echo "<tr>";
+        echo "<td>".$linha['cidade']."</td>";
+        echo "</tr>";
+        echo "<tr>";
+        echo "<td>".$linha['uf']."</td>";
+        echo "</tr>";
+    }
+} else {
+    echo "<tr><td colspan='4'>Nenhum cliente encontrado.</td></tr>";
+}
+$conexao->close();
+?>
                     </tbody>
                   </table>
                 </div>
