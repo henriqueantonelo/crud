@@ -24,10 +24,10 @@
         <a href="procurar.php">Procurar</a>
       </ul>
       <ul>
-        <a href="apagar.php">Apagar</a>
+        <a href="atualizar.php">Atualizar</a>
       </ul>
       <ul>
-        <a href="atualizar.php">Atualizar</a>
+        <a href="apagar.php">Apagar</a>
       </ul>
       </nav>
     </div>

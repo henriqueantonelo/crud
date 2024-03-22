@@ -120,7 +120,7 @@ button:hover {
   background-color: var(--white);
   width: 800px;
   position: fixed;
-  bottom: 0;
+  bottom: -150px;
   left: 50%;
   transform: translateX(-50%);
   margin-bottom: 60px;

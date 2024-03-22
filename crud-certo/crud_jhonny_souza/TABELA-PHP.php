@@ -68,15 +68,13 @@ $conexao = new mysqli("127.0.0.1","root","","crud_henrique" );
     $conexao->close();
 ?>
 </table>
-                </div>
-              </td>
-            </tr>
-          </table>
-        </div>
-      </div>
-    </div>
-
-<div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
 <nav class="navbar">
         <ul>
           <li><a href="index.php" class="fa-solid fa-house" title="Menu"></a></li>
@@ -96,5 +94,6 @@ $conexao = new mysqli("127.0.0.1","root","","crud_henrique" );
           </li>
         </ul>
       </nav>
+<div>
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Atualizar</title>
+    <title>Apagar</title>
     <link rel="stylesheet" href="APAGAR-CSS.css" />
     <!-- Fontes do Font-Awesome -->
     <link
@@ -14,9 +14,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <style>
-      /* Adicione seu estilo CSS personalizado aqui */
-    </style>
 </head>
 <body>
 
@@ -56,7 +53,7 @@ if ($id !== null)
 }
 ?>      
 <div class="container"> 
-<form action="APAGA-BACK.php" method="POST" onsubmit="return confirm('Confirma?');">>
+<form action="APAGA-BACK.php" method="POST" onsubmit="return confirm('Confirma?');">
   <h1>APAGAR</h1>
   <div class="forms-container">
     <!-- nome -->
